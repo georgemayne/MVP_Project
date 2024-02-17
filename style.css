@@ -113,6 +113,20 @@
     cursor: pointer;
 }
   
+.book-listing img {
+  width: 100px;
+  height: 100px;
+}
+
+.book-listing button {
+  padding: 5px 20px;
+  font-size: 16px;
+  background-color: #5185e6;
+  color: white;
+    border: none;
+    cursor: pointer;
+}
+
   footer {
     position: absolute;
     background-color: #ffffff;
