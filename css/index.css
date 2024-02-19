@@ -8,7 +8,7 @@
 body {
     scroll-behavior: inherit;
 }
-.bg_img {
+/* .bg_img {
     position: absolute;
     top: 0;
     left: 0;
@@ -22,4 +22,4 @@ body {
     padding: 80px 100px 0;
     z-index: -1;
     filter: blur(3px);
-}
+} */
