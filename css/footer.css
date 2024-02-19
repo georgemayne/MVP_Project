@@ -1,5 +1,5 @@
 footer {
-    position: absolute;
+    position: fixed;
     bottom: 0;
     width: 100%;
     height: 30px;
@@ -13,4 +13,11 @@ footer {
 footer a {
     color: #fff;
     text-decoration: none;
+}
+@media(max-width:1000px){
+    
+    .footer {
+        bottom: 0;
+        position: absolute;
+    }
 }
