@@ -40,6 +40,7 @@ button i {
 .navbar .search-box {
     flex: 2;
     position: relative;
+    box-shadow: 0 0 10px #000;
 }
 
 .search-box input{
