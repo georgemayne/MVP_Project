@@ -2,48 +2,663 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BookHive | Home </title>
 
-    <link rel="shortcut icon" href="/img/book.png" type="image/x-icon">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="/css/index.css">
-    <link rel="stylesheet" href="/css/header.css">
-    <link rel="stylesheet" href="/css/footer.css">
-    
-  
+    <!-------- title ----------->
+    <title> BookHive | Home </title>
+
+    <!-------- customer style link ----------->
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="shortcut icon" href="./img/logo/book.png" type="image/x-icon">
+
+
+    <!-------- font awesome cdn link --------->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+
+    <!------- swipper cdn link ------------>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+
+
 </head>
 <body>
-    <header>
-        <nav class="navbar">
-            <img src="/img/logo1.png" alt="logo">
-            <input type ="checkbox" name ="" id ="chk1">
-            <div class="search-box">
-                <form>
-                    <input type ="text" name ="search" id ="srch" placeholder="Search books...">
-                    <button type ="submit"><i class="fa fa-search"></i></button>
-                </form>
-            </div>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Books</a></li>
-                <li><a href="#">Categories</a></li>
-                <li><a href="#">Arrivals</a></li>
-                <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
-                <li><a href="#">        Login</a></li>
-            </ul>
-            <div class="menu">
-                <label for="chk1">
-                    <i class="fa fa-bars"></i>
-                </label>
-            </div>
-        </nav>
-    </header>
-    <div class="bg_img"></div>
 
-    <footer class="footer">
-        <a href="#">Copyright &copy; 2024 George || All rights reserved.</a>
-    </footer>
+    <!--------- header section start ------------>
+    <header class="header">
+        <div class="header_one">
+            <img src="./img/logo/logo2.png" alt="logo">
+
+            <form action="" class="search-form">
+                <input id="search-box" type="search" placeholder="search here...">
+                <label for="" class="fas fa-search"></label>
+            </form>
+
+            <div class="icons">
+                <div id="search-btn" class="fas fa-search"></div>
+                <a href="" class="fas fa-shopping-cart"></a>
+                <div id="login-btn" class="fas fa-user"></div>
+            </div>
+        </div>
+
+        <!----- navigation bar -------->
+        <div class="header_two">
+            <div class="navbar">
+                <a href="#home">Home</a>
+                <a href="#category">Category</a>
+                <a href="#arrivals">In Stock</a>
+                <a href="#reviews">Reviews</a>
+                <a href="#portfolio">Portfolio</a>
+            </div>
+        </div>
+    
+    </header>
+
+    <!-------- bottom navbar start ----------->
+    <div class="bottom-navbar">
+        <a href="#home" class="fas fa-home"></a>
+        <a href="#category" class="fas fa-archive"></a>
+        <a href="#arrivals" class="fas fa-tags"></a>
+        <a href="#portfolio" class="fas fa-briefcase"></a>
+    </div>
+
+     <!-------- login form start ----------->
+    <div class="login-form-container">
+        <div id="close-login-btn" class="fas fa-times"></div>
+
+        <form action="">
+            <h3>Login</h3>
+            <span>Email</span>
+            <input type="email" class="box" placeholder="enter email">
+            <span>Password</span>
+            <input type="password" class="box" placeholder="enter password">
+
+            <div class="check-box">
+                <input type="checkbox" id="remember-me">
+                <label for="remember-me">Remember me</label>
+            </div>
+
+            <input type="submit" value="sign in" class="btn">
+            <p>Forgot Password? <a href="">Click Here</a></p>
+            <p>Dont't have an account ? <a href="">Register Here</a></p>
+            <p></p>
+        </form>
+    </div>
+
+    <!-------- home section start ----------->
+    <section class="home" id="home">
+        <div class="row">
+            <div class="content">
+                <h3>Welcome to BookHive Online Store!</h3>
+                <p>Embark on your reading journey with us and unlock a world of endless possibilities. Dive into captivating stories, broaden your horizons, and let your imagination soar.
+
+                    Ready to start exploring? Dive into our online bookstore now!</p>
+                <a href="" class="btn">Let's Go</a>
+            </div>
+
+            <div class="swiper books-list">
+                <div class="swiper-wrapper">
+                    <a href="" class="swiper-slide"><img src="./img/book/book-20.jpg" alt=""></a>
+                    <a href="" class="swiper-slide"><img src="./img/book/book-22.webp" alt=""></a>
+                    <a href="" class="swiper-slide"><img src="./img/book/book-25.jpg" alt=""></a>
+                    <a href="" class="swiper-slide"><img src="./img/book/book-24.jpg" alt=""></a>
+                    <a href="" class="swiper-slide"><img src="./img/book/book-25.jpg" alt=""></a>
+                    <a href="" class="swiper-slide"><img src="./img/book/book-22.webp" alt=""></a>
+                </div>
+
+                <!-- <img class="stand" src="./img/stand.png" alt=""> -->
+            </div>
+        </div>
+    </section>
+      
+
+     <!-------- home section ends  ----------->
+
+    <!-------- icons section start  ----------->
+
+    <section class="icons-container">
+        <div class="icons">
+            <i class="fas fa-truck"></i>
+            <div class="content">
+                <h3>Fast Shipping</h3>
+            </div>
+        </div>
+
+        <div class="icons">
+            <i class="fas fa-lock"></i>
+            <div class="content">
+                <h3>Secure Payment</h3>
+            </div>
+        </div>
+
+        <div class="icons">
+            <i class="fas fa-headset"></i>
+            <div class="content">
+                <h3>24/7 Customer Service</h3>
+            </div>
+        </div>
+
+    </section>
+
+    <!-------- category section start  ----------->
+
+    <section class="category" id="category">
+        <div class="heading"><span>Categories</span></div>
+
+        <div class="swiper category-slider">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide box">
+                    <div class="image">
+                        <img src="./img/book/book-23.webp" alt="">
+                    </div>
+
+                    <div class="content">
+                        <h3>A Fine Balance</h3>
+                        <div class="price">GH₵90.99 <span>GH₵120.99</span></div>
+                        <a href="" class="btn">Add to Cart</a>
+                    </div>
+                </div>
+
+                <div class="swiper-slide box">
+                    <div class="image">
+                        <img src="./img/book/book-24.jpg" alt="">
+                    </div>
+
+                    <div class="content">
+                        <h3>Happiness Falls</h3>
+                        <div class="price">GH₵99.99 <span>GH₵120.99</span></div>
+                        <a href="" class="btn">Add to Cart</a>
+                    </div>
+                </div>
+
+                <div class="swiper-slide box">
+
+                    <div class="image">
+                        <img src="./img/book/book-20.jpg" alt="">
+                    </div>
+
+                    <div class="content">
+                        <h3>Midnight's Children</h3>
+                        <div class="price">GH₵50.99 <span>GH₵90.99</span></div>
+                        <a href="" class="btn">Add to Cart</a>
+                    </div>
+                </div>
+
+                <div class="swiper-slide box">
+
+                    <div class="image">
+                        <img src="./img/book/book-22.webp" alt="">
+                    </div>
+
+                    <div class="content">
+                        <h3>The End of Loneliness</h3>
+                        <div class="price">GH₵45.99 <span>GH₵75.99</span></div>
+                        <a href="" class="btn">Add to Cart</a>
+                    </div>
+                </div>
+
+                <div class="swiper-slide box">
+                    <div class="image">
+                        <img src="./img/book/book-24.jpg" alt="">
+                    </div>
+
+                    <div class="content">
+                        <h3>Happiness Falls</h3>
+                        <div class="price">GH₵99.99 <span>GH₵120.99</span></div>
+                        <a href="" class="btn">Add to Cart</a>
+                    </div>
+                </div>
+
+                <div class="swiper-slide box">
+
+                    <div class="image">
+                        <img src="./img/book/book-25.jpg" alt="">
+                    </div>
+
+                    <div class="content">
+                        <h3>American Street</h3>
+                        <div class="price">GH₵155.99 <span>GH₵220.99</span></div>
+                        <a href="" class="btn">Add to Cart</a>
+                    </div>
+                </div>
+
+                <div class="swiper-slide box">
+
+                    <div class="image">
+                        <img src="./img/book/book-20.jpg" alt="">
+                    </div>
+
+                    <div class="content">
+                        <h3>Midnight's Children</h3>
+                        <div class="price">GH₵50.99 <span>GH₵90.99</span></div>
+                        <a href="" class="btn">Add to Cart</a>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+    </section>
+
+
+      <!-------- arrivals section start  ----------->
+
+      <section class="arrivals" id="arrivals">
+            <div class="heading"><span>New Stock</span></div>
+            <div class="swiper arrivals-slider">
+                <div class="swiper-wrapper">
+                    
+                    <a href="" class="swiper-slide box">
+                        <div class="image">
+                            <img src="./img/book/book-25.jpg" alt="">
+                        </div>
+                        <div class="content">
+                            <h3>New Stock</h3>
+                            <div class="price">GH₵65.99 <span>GH₵80.99</span></div>
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="" class="swiper-slide box">
+                        <div class="image">
+                            <img src="./img/book/book-24.jpg" alt="">
+                        </div>
+                        <div class="content">
+                            <h3>New Stock</h3>
+                            <div class="price">GH₵159.99 <span>GH₵220.99</span></div>
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="" class="swiper-slide box">
+                        <div class="image">
+                            <img src="./img/book/book-23.webp" alt="">
+                        </div>
+                        <div class="content">
+                            <h3>New Stock</h3>
+                            <div class="price">GH₵105.99 <span>GH₵170.99</span></div>
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="" class="swiper-slide box">
+                        <div class="image">
+                            <img src="./img/book/book-22.webp" alt="">
+                        </div>
+                        <div class="content">
+                            <h3>New Stock</h3>
+                            <div class="price">GH₵150.99 <span>GH₵190.99</span></div>
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="" class="swiper-slide box">
+                        <div class="image">
+                            <img src="./img/book/book-1.png" alt="">
+                        </div>
+                        <div class="content">
+                            <h3>New Stock</h3>
+                            <div class="price">GH₵200.99 <span>GH₵500.99</span></div>
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="" class="swiper-slide box">
+                        <div class="image">
+                            <img src="./img/book/book-20.jpg" alt="">
+                        </div>
+                        <div class="content">
+                            <h3>New Stock</h3>
+                            <div class="price">GH₵65.99 <span>GH₵80.99</span></div>
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="" class="swiper-slide box">
+                        <div class="image">
+                            <img src="./img/book/book-25.jpg" alt="">
+                        </div>
+                        <div class="content">
+                            <h3>New Stock</h3>
+                            <div class="price">GH₵65.99 <span>GH₵80.99</span></div>
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="" class="swiper-slide box">
+                        <div class="image">
+                            <img src="./img/book/book-23.webp" alt="">
+                        </div>
+                        <div class="content">
+                            <h3>New Stock</h3>
+                            <div class="price">GH₵65.99 <span>GH₵80.99</span></div>
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="" class="swiper-slide box">
+                        <div class="image">
+                            <img src="./img/book/book-22.webp" alt="">
+                        </div>
+                        <div class="content">
+                            <h3>New Stock</h3>
+                            <div class="price">GH₵350.99 <span>GH₵550.99</span></div>
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <div class="swiper arrivals-slider">
+                <div class="swiper-wrapper">
+                    <a href="" class="swiper-slide box">
+                        <div class="image">
+                            <img src="./img/book/book-6.png" alt="">
+                        </div>
+                        <div class="content">
+                            <h3>New Stock</h3>
+                            <div class="price">GH₵900.99 <span>GH₵1500.99</span></div>
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="" class="swiper-slide box">
+                        <div class="image">
+                            <img src="./img/book/book-25.jpg" alt="">
+                        </div>
+                        <div class="content">
+                            <h3>New Stock</h3>
+                            <div class="price">GH₵65.99 <span>GH₵80.99</span></div>
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="" class="swiper-slide box">
+                        <div class="image">
+                            <img src="./img/book/book-20.jpg" alt="">
+                        </div>
+                        <div class="content">
+                            <h3>New Stock</h3>
+                            <div class="price">GH₵40.99 <span>GH₵89.99</span></div>
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                        </div>
+                    </a>
+                    
+                    <a href="" class="swiper-slide box">
+                        <div class="image">
+                            <img src="./img/book/book-23.webp" alt="">
+                        </div>
+                        <div class="content">
+                            <h3>New Stock</h3>
+                            <div class="price">GH₵90.99 <span>GH₵130.99</span></div>
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+      </section>
+
+
+     <!-------- deal section start  ----------->
+
+     <section class="deal">
+        <div class="content">
+            <h3>Gold Rush</h3>
+            <h1>Get upto 70% off all books</h1>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, vero. Voluptatibus voluptates inventore nulla vel.
+            </p>
+            <a href="" class="btn">Shop Now</a>
+        </div>
+
+        <div class="image">
+            <img src="./img/book/book-20.jpg" alt="">
+        </div>
+     </section>
+
+    <!--- review section start  ----->
+
+     <section class="reviews" id="reviews">
+        <h1 class="heading"><span>Reviews</span></h1>
+
+        <div class="swiper reviews-slider">
+            <div class="swiper-wrapper">              
+
+                <div class="swiper-slide box">
+                    <img src="./img/pic/pic-1.jpg" alt="">
+                    <h3>Emerald D</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque eligendi amet recusandae perferendis cumque nesciunt.
+                    </p>
+
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                </div>
+
+                <div class="swiper-slide box">
+                    <img src="./img/pic/pic-2.jpeg" alt="">
+                    <h3>Paa Kwesi</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque eligendi amet recusandae perferendis cumque nesciunt.
+                    </p>
+
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                </div>
+
+                <div class="swiper-slide box">
+                    <img src="./img/pic/pic-3.jpg" alt="">
+                    <h3>Nasira Bliss</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque eligendi amet recusandae perferendis cumque nesciunt.
+                    </p>
+
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                </div>
+
+                <div class="swiper-slide box">
+                    <img src="./img/pic/pic-4.jpeg" alt="">
+                    <h3>Evangeline K</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque eligendi amet recusandae perferendis cumque nesciunt.
+                    </p>
+
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                </div>
+
+                <div class="swiper-slide box">
+                    <img src="./img/pic/pic-5.jpeg" alt="">
+                    <h3>Kezia A</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque eligendi amet recusandae perferendis cumque nesciunt.
+                    </p>
+
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                </div>
+
+                <div class="swiper-slide box">
+                    <img src="./img/pic/pic-6.jpeg" alt="">
+                    <h3>Esi Mends</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque eligendi amet recusandae perferendis cumque nesciunt.
+                    </p>
+
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+     </section>
+
+
+     <!-------- news letter section start  ----------->
+
+    <section class="newletter">
+        <form action="">
+            <h3>Subscribe for latest update</h3>
+            <input type="email" placeholder="enter your email" class="box">
+            <input type="submit" value="Subscribe" class="btn">
+        </form>
+    </section>
+
+
+    <!-- footer section start  -->
+    
+    <section class="footer">
+        <div class="box-container">
+            <div class="box">
+                <h3>Locations</h3>
+                <a href=""><i class="fas fa-map-marker-alt"></i>Ghana</a>
+                <a href=""><i class="fas fa-map-marker-alt"></i>South Africa</a>
+                <a href=""><i class="fas fa-map-marker-alt"></i>Kenya</a>
+                <a href=""><i class="fas fa-map-marker-alt"></i>Nigeria</a>
+                <img src="./img/worldmap.png" alt="" class="map">
+            </div>
+
+            <div class="box">
+                <h3>Quick Links</h3>
+                <a href=""><i class="fas fa-arrow-right"></i>Home</a>
+                <a href=""><i class="fas fa-arrow-right"></i>Categories</a>
+                <a href=""><i class="fas fa-arrow-right"></i>Arrivals</a>
+                <a href=""><i class="fas fa-arrow-right"></i>Portfolio</a>    
+            </div>
+
+            <div class="box">
+                <h3>Contact Info</h3>
+                <a href=""><i class="fas fa-phone"></i>+233 123456789</a>
+                <a href=""><i class="fas fa-phone"></i>+233 242-123-1234</a>
+                <a href=""><i class="fas fa-envelope"></i>info@bookhive.com</a>
+                <a href=""><i class="fab fa-instagram"></i>Instagram</a>
+                <a href=""><i class="fab fa-twitter"></i>Twitter</a>
+                <a href=""><i class="fab fa-linkedin"></i>LinkedIn</a>
+            </div>
+        </div>
+
+        <div class="credit"> Copyright &copy; 2024 | Developed by <span>George Mayne ALX Student</span> | All Rights Reserved</div>
+    </section>
+          
+
+    <!---- swiper cdn link -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+     
+
+     <!------- custom script link --------->
+     <script src="./js/swiper.js"></script>
+    
 </body>
 </html>
